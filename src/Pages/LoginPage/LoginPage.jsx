@@ -21,8 +21,10 @@ export function LoginPage() {
           </div>
           <p><input className="style-input-checkbox" type="checkbox" /> Remember me</p>
          
-          <a href="#" className="button-login-form border-style">Login</a>
-          <a className="btn-sign-up button-link" href="#">Create New Account <i class="fas fa-chevron-right"></i></a>
+          <Link to="#" className="button-login-form border-style">Login
+          </Link>
+          <Link to="/signup" className="btn-sign-up button-link">Create New Account <i class="fas fa-chevron-right"></i>
+          </Link>
         </form>
       </div>
     </section>

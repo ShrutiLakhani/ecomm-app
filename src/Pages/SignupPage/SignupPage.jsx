@@ -20,9 +20,9 @@ export function SignupPage() {
           <div className="form-bottom-section">
             <input type="checkbox" className="checkbox" /><span>I accept all Terms and Conditions</span>
           </div>
-          <Link to="/login" className="button-login-form border-style">Create New Account
+          <Link to="#" className="button-signup-form border-style">Create New Account
           </Link>
-          <Link to="/login"  href="#">Already have an account <i
+          <Link to="/login">Already have an account <i
               className="fas fa-chevron-right"></i>
           </Link>    
         </form>

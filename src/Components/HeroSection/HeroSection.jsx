@@ -7,7 +7,8 @@ export function HeroSection() {
      <div className="hero-img-container">
           <img className="hero-img" src={heroImg} alt="Hero-Image" />
                 <div className="overlay-text">
-                    <a href="/Product/Product.html" className="btn-primary">SHOP NOW</a>
+                    <Link to="/product" className="btn-primary">SHOP NOW
+                    </Link>
                 </div>
       </div>    
   );

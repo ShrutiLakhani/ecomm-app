@@ -49,7 +49,7 @@ justify-content: space-evenly;
     left: 43%;
 }
 
-.Wishlist-container .card2-container {
+.Wishlist-container .card2-container .category-card {
     padding-bottom: 0px;
     box-shadow: none;
 }

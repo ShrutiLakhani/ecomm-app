@@ -3,7 +3,6 @@
     flex-direction: column;
     margin-top: 6rem;
     height: 100vh;
-    box-shadow: 0 4px 12px 0 rgb(0 0 0 / 15%);
 }
 
 .login-page-bottom-container {
@@ -40,7 +39,7 @@
     margin: 0rem 2rem 1rem 0rem;
 }
 
-.button-login-form {
+.button-signup-form {
     display: block;
     padding: .6rem 6.5rem;
     white-space: nowrap;
