@@ -1,0 +1,122 @@
+.product-page {
+    display: flex;
+}
+
+
+.product-list {
+    min-height: 50vh;
+}
+.Wishlist-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    width: 100%;
+    max-width: 61.25rem;
+    margin: 0 auto;
+}
+
+.Wishlist-container .card2-container {
+    width: 15rem;
+    text-align: left;
+    background: var(--card-BG);
+    padding-bottom: 1.2rem;
+    border-radius: 0.5rem;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+    position: relative;
+    margin: 2rem;
+}
+
+.Wishlist-container .card2-container,
+h1,
+h2,
+p {
+    margin-left: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.Wishlist-container .card2-container h1 {
+    font-size: 1rem;
+    margin-top: 0.7rem;
+}
+
+.Wishlist-container .card2-container h2 {
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-card-color);
+}
+
+.Wishlist-container .card2-container h5 {
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    color: var(--secondary-card-color);
+}
+
+/* card2 details */
+.Wishlist-container .card2-container p {
+    font-size: 0.8rem;
+    padding: 0.2rem;
+}
+
+/* card 2 image */
+.Wishlist-container .card2-container img {
+    width: 15rem;
+    height: 18rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.Wishlist-container .primary-solid-brown {
+    background-color: var(--bg-card-button-color2);
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    border: none;
+}
+
+.Wishlist-container .primary-solid-beige {
+    border-radius: 0.3rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: var(--bg-card-button-color1);
+    border-radius: 50%;
+    border: none;
+}
+
+.Wishlist-container .card2-bottom-section {
+    padding-left: 1rem;
+}
+
+ins {
+    text-decoration: none;
+}
+
+.container-shadow {
+    box-shadow: -1px 1px 5px 9px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.Wishlist-container .card2-container .badge-style {
+    font-size: 2rem;
+    position: absolute;
+    left: 80%;
+    top: 1%;
+    color: var(--tertiary-color);
+}
+
+.primary-button-icon-cart {
+    margin-left: 2.3rem;
+    display: flex;
+    background-color: var(--component-black-color);
+    color: var(--component-white-color);
+    padding: 0.6rem 2rem;
+    border-radius: 0.3rem;
+    border: 1.5px solid var(--component-black-color);
+    align-items: center;
+}
+
+.primary-button-icon-cart .material-icons {
+    color: var(--component-white-color);
+}
