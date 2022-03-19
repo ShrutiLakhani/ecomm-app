@@ -6,6 +6,7 @@ import {
   SignupPage,
   LoginPage,
   ProductPage,
+  WishlistPage,
 } from "./Pages/index.js";
 
 function App() {
@@ -15,8 +16,8 @@ function App() {
       <Navbar/>
       <Routes>
           <Route path="/" element={<HomePage />} />
-          {/* <Route path="wishlist" element={<WishlistPage />} />
-          <Route path="cart" element={<CartPage />} /> */}
+          <Route path="wishlist" element={<WishlistPage />} />
+          {/* <Route path="cart" element={<CartPage />} /> */}
           <Route path="login" element={<LoginPage />} />
           <Route path="signup" element={<SignupPage />} /> 
           <Route path="product" element={<ProductPage />} /> 

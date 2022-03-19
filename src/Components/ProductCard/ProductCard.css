@@ -1,8 +1,3 @@
-.product-page {
-    display: flex;
-}
-
-
 .product-list {
     min-height: 50vh;
 }
@@ -107,16 +102,26 @@ ins {
 }
 
 .primary-button-icon-cart {
-    margin-left: 2.3rem;
+    margin-left: 1.6rem;
     display: flex;
     background-color: var(--component-black-color);
-    color: var(--component-white-color);
+    color: white;
     padding: 0.6rem 2rem;
     border-radius: 0.3rem;
     border: 1.5px solid var(--component-black-color);
     align-items: center;
 }
-
+ 
+.btn-bag-card{
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
 .primary-button-icon-cart .material-icons {
     color: var(--component-white-color);
+    vertical-align:sub;
+}
+
+.Wishlist-container .card2-container .badge-style:hover {
+ color: red;
 }
