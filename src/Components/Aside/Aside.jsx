@@ -3,7 +3,7 @@ import "./Aside.css";
 
 export function Aside() {
     return (
-            <div className="product-page">
+
                 <div className="product-content-left-sidebar">
                     <aside>
                         <div className="left-sidebar-filter-section header-container">
@@ -134,6 +134,6 @@ export function Aside() {
                         </div> 
                 </aside>
          </div>
-    </div>
+    // </div>
   );
 }
