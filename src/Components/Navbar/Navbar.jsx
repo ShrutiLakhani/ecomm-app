@@ -7,8 +7,8 @@ export function Navbar() {
        <header className="header-outer">
             <div className="header-inner">
                 <section className="ecomm-navbar">
-                    <a className="ecomm-logo-img" href="./index.html">
-                    </a>
+                    <Link to="/" className="ecomm-logo-img">
+                    </Link>
                     <div>
                         <input className="nav-input-container fa" placeholder="Search"></input>
                     </div>
@@ -18,19 +18,21 @@ export function Navbar() {
                                 <i className="fas fa-user fa-lg"></i>
                             </Link>    
                             <div className="dropdown-content">
-                                <a href="#">Orders</a>
-                                <a href="#">Wishlist</a>
+                                <Link to ="/cart">Orders</Link>
+                                <Link to="/wishlist">Wishlist</Link>
                                 <a href="#">Giftcards</a>
                                 <a href="#">Contact Us</a>
                             </div>
                         </div>
                         <div className="icon-ecomm">
-                            <a href="/WishList/Wishlist.html"><i className="far fa-heart fa-lg"></i></a>
+                            <Link to="/wishlist"><i className="far fa-heart fa-lg"></i>
+                            </Link>    
                         </div>
                         <div className="icon-ecomm">
-                            <a href="/Cart/Cart.html"><span className="material-icons">
+                            <Link to="/cart"><span className="material-icons">
                                     shopping_bag
-                                </span></a>
+                                </span>
+                            </Link>    
                         </div>
                     </div>    
                 </section>

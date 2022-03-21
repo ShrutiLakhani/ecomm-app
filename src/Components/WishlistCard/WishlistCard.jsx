@@ -1,7 +1,7 @@
 import React from "react";
-import "./ProductCard.css";
+import "./WishlistCard.css";
 import { Link } from "react-router-dom";
-export function ProductCard() {
+export function WishlistCard() {
     return (
        <div className="product-content-container">
            <div className="product-list">
@@ -15,11 +15,10 @@ export function ProductCard() {
                                 <h1>Michael Kors</h1>
                                 <h2>Karlie Medium Leather Satchel</h2>
                                 <h5><ins>₹22,500</ins><del>₹45,000</del>50% Off</h5>
-                                <button className="primary-button-icon-cart">
-                                    <Link to="/wishlist" className="prod-btn-bag-card">       
-                                       <span className="material-icons"> shopping_bag</span>ADD TO BAG
+                                 <div class="divider-sidebar"></div>
+                                    <Link to="/cart" className="btn-bag-card">       
+                                       <span>MOVE TO BAG</span>
                                     </Link> 
-                                </button>
                     </div>
                </div>
            </div>
