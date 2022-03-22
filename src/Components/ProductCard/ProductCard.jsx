@@ -16,7 +16,7 @@ export function ProductCard() {
                                 <h2>Karlie Medium Leather Satchel</h2>
                                 <h5><ins>₹22,500</ins><del>₹45,000</del>50% Off</h5>
                                 <button className="primary-button-icon-cart">
-                                    <Link to="/wishlist" className="prod-btn-bag-card">       
+                                    <Link to="/cart" className="prod-btn-bag-card">       
                                        <span className="material-icons"> shopping_bag</span>ADD TO BAG
                                     </Link> 
                                 </button>

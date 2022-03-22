@@ -6,10 +6,8 @@ export function WishlistCard() {
        <div className="product-content-container">
            <div className="product-list">
                <div className="Wishlist-container">
-                    <div className="card2-container wishlist-card">
-                        <Link to="/wishlist">
-                        <span><i className="far fa-heart fa-sm badge-style"></i></span>
-                        </Link>
+                    <div className="card2-container">
+                            <Link to="#" className=" wishlist-card card-closebtn">&times;</Link>
                              <img src="https://img.tatacliq.com/images/i7/658Wx734H/MP000000010223017_658Wx734H_202108092243441.jpeg"
                                        alt="image-bag" />
                                 <h1>Michael Kors</h1>

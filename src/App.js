@@ -7,6 +7,7 @@ import {
   LoginPage,
   ProductPage,
   WishlistPage,
+  CartPage,
 } from "./Pages/index.js";
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
       <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="wishlist" element={<WishlistPage />} />
-          {/* <Route path="cart" element={<CartPage />} /> */}
+          <Route path="cart" element={<CartPage />} /> 
           <Route path="login" element={<LoginPage />} />
           <Route path="signup" element={<SignupPage />} /> 
           <Route path="product" element={<ProductPage />} /> 

@@ -22,3 +22,11 @@
     font-size: 1rem;
     margin: 2rem 4rem;
 }
+.wishlist-card .card-closebtn {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 95%;
+    top: 0%;
+    color: var(--component-black-color);
+    text-decoration: none;
+}
