@@ -1,4 +1,4 @@
-.product-list {
+/* .product-list {
     min-height: 50vh;
 }
 .Wishlist-container {
@@ -50,7 +50,7 @@ p {
 }
 
 /* card2 details */
-.Wishlist-container .card2-container p {
+/* .Wishlist-container .card2-container p {
     font-size: 0.8rem;
     padding: 0.2rem;
 }
@@ -124,4 +124,62 @@ ins {
 
 .Wishlist-container .card2-container .badge-style:hover {
  color: red;
+} */ */
+
+.product-section .product-card {
+    width: 10rem;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+    margin-right: 9.75px;
+    margin-left: 9.75px;
+    justify-content: space-between;
+}
+
+.product-card .tab {
+    background-color: var(--secondary-color);
+    padding: 2px 10px;
+    align-self: center;
+    border-radius: 5px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.product-card .img-container .card-img {
+    object-fit: contain;
+}
+
+.img-container {
+    height: 200px;
+    position: relative;
+}
+
+.img-container .card-tag {
+    background-color: black;
+    position: absolute;
+    width: fit-content;
+    padding: 0.2rem 0.7rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: inherit;
+    bottom: 0;
+}
+
+.product-section .product-card .btn {
+    font-size: 1rem;
+}
+
+.fav-icon:hover {
+    cursor: pointer;
+}
+
+.fav-icon .fas.fa-heart {
+    color: gray;
+}
+
+.fav-icon .fas.fa-heart.red {
+    color: red;
+}
+
+.fav-icon .fas.fa-heart:hover {
+    color: red;
 }

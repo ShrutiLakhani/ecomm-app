@@ -27,16 +27,6 @@
 h2 {
     text-align: center;
 }
-
-.Wishlist-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
-    width: 100%;
-    max-width: 100rem;
-    margin: 0 auto;
-    place-items: center;
-}
 .btn-primary {
     padding: 1rem 5rem;
     border-radius: 10px;
