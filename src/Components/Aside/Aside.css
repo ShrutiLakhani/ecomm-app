@@ -2,11 +2,9 @@
     display: flex;
     flex: 1 1;
 }
-
 .product-list {
     min-height: 50vh;
 }
-
 .product-content-left-sidebar {
     height: max-content;
     flex: 0 0 250px;
@@ -41,6 +39,16 @@
 .left-sidebar-filter-section ul {
     margin: 0px;
 }
+.slider-input{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1rem 0 0;
+}
+.price-form {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1rem 0 0;
+}
 
 .category-container {
     position: relative;
@@ -71,12 +79,6 @@
     justify-content: space-between;
     margin-right: 1rem;
 }
-
-.price-text span {
-    display: inline;
-    margin: 1rem 2rem 1rem 0rem;
-}
-
 .slider {
     margin: 0 1rem 0 0;
 }
