@@ -11,7 +11,7 @@ export const products = [
     title: "Michael Kors",
     price: 50000,
     categoryName: "Tote",
-    stars: 4,
+    rating: 4,
     inStock: true,
     badge: "New",
     image:
@@ -22,7 +22,7 @@ export const products = [
     title: "Michael Kors",
     price: 36000,
     categoryName: "Tote",
-    stars: 4.4,
+    rating: 4.4,
     inStock: true,
     badge: "New",
     image:
@@ -32,7 +32,7 @@ export const products = [
      title: "Coach",
     price: 46000,
     categoryName: "Tote",
-    stars: 4,
+    rating: 4,
     inStock: true,
     badge: "New",
     image:
@@ -42,7 +42,7 @@ export const products = [
     title: "Coach",
     price: 34000,
     categoryName: "Tote",
-    stars: 4,
+    rating: 4,
     inStock: true,
     badge: "New",
     image:
@@ -53,7 +53,7 @@ export const products = [
      title: "Coach",
     price: 16500,
     categoryName: "Wallet",
-    stars: 4,
+    rating: 4,
     inStock: true,
     badge: "New",
     image:
@@ -64,7 +64,7 @@ export const products = [
     title: "Michael Kors",
     price: 24000,
     categoryName: "Wallet",
-    stars: 4,
+    rating: 4,
     inStock: true,
     badge: "New",
     image:
@@ -75,7 +75,7 @@ export const products = [
     title: "Coach",
     price: 22500,
     categoryName: "Watch",
-    stars: 4,
+    rating: 4,
     inStock: true,
     badge: "New",
     image:
@@ -85,7 +85,7 @@ export const products = [
     title: "Michael Kors",
     price: 14500,
     categoryName: "Watch",
-    stars: 4,
+    rating: 4,
     inStock: true,
     badge: "New",
     image:
@@ -95,7 +95,7 @@ export const products = [
     title: "Coach",
     price: 24000,
     categoryName: "Footwear",
-    stars: 3,
+    rating: 3,
     inStock: true,
     badge: "New",
     image:
@@ -105,7 +105,7 @@ export const products = [
     title: "Michael Kors",
     price: 17000,
     categoryName: "Footwear",
-    stars: 4,
+    rating: 4,
     inStock: true,
     badge: "New",
     image:
@@ -115,7 +115,7 @@ export const products = [
     title: "Jimmy Choo",
     price: 90000,
     categoryName: "Footwear",
-    stars: 2,
+    rating: 2,
     inStock: true,
     badge: "New",
     image:
@@ -125,7 +125,7 @@ export const products = [
     title: "Gucci",
     price: 28000,
     categoryName: "Footwear",
-    stars: 1,
+    rating: 1,
     inStock: true,
     badge: "New",
     image:

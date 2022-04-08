@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import "./ProductCard.css";
 export function ProductCard({products}) {
-  const { title, image, price, categoryName, stars, badge, id, _id } = products;
+  const { title, image, price, categoryName, rating, badge, id, _id } = products;
   return (
    <div className="product-content-container">
             <div className="product-list">
@@ -18,7 +18,7 @@ export function ProductCard({products}) {
                                         alt="" />
                                  <h1>{title}</h1>
                                  <h2>{price}</h2>
-                                 <h2>{stars}</h2>
+                                 <h2>{rating}</h2>
                                  <button className="primary-button-icon-cart">
                                      <Link to="/cart" className="prod-btn-bag-card">       
                                         <span className="material-icons"> shopping_bag</span>ADD TO BAG

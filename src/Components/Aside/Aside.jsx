@@ -98,27 +98,31 @@ export function Aside() {
                                 <span className="filters-subheader-title">RATING</span>
                                 <div className="checkbox">
                                     <div>
-                                        <input type="radio" className="radio-prod-category" name="radio"></input>
+                                        <input type="radio" className="radio-prod-category" name="rating" value="4" checked={filterState.rating==="4"} onChange={(e)=>
+                                        filterDispatch({type:"RATING",payload:e.target.value})} ></input>
                                         <label className="radio left-sidebar-label">
                                            4 Stars Above 
                                         </label>
                                     </div>
                                     <div>
-                                       <input type="radio" className="radio-prod-category" name="radio"></input>
+                                       <input type="radio" className="radio-prod-category" name="rating" value="3" checked={filterState.rating==="3"} onChange={(e)=>
+                                    filterDispatch({type:"RATING",payload:e.target.value})}></input>
                                          <label className="radio left-sidebar-label">
                                             3 Stars Above
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="radio" className="radio-prod-category" name="radio"></input>
+                                        <input type="radio" className="radio-prod-category" name="rating" value="2" checked={filterState.rating==="2"} onChange={(e)=>
+                                        filterDispatch({type:"RATING",payload:e.target.value})}></input>
                                          <label className="radio left-sidebar-label">
                                             2 Stars Above
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="radio" className="radio-prod-category" name="radio"></input>
-                                        <label className="radio left-sidebar-label">
-                                          1 Stars Above
+                                        <input type="radio" className="radio-prod-category" name="rating" value="1" checked={filterState.rating==="1"} onChange={(e)=>
+                                        filterDispatch({type:"RATING",payload:e.target.value})}></input>
+                                         <label className="radio left-sidebar-label">
+                                            1 Stars Above
                                         </label>
                                     </div>
                                 </div>
