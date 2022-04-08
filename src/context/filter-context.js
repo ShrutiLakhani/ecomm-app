@@ -5,6 +5,7 @@ const FilterContext = createContext()
 
 const initialState = {
     sortby:"",
+    rating:"",
 }
 
 const FilterProvider = ({children}) => {
@@ -31,6 +32,10 @@ const sortByPrice = ({sortby}, products) => {
     }
 }
 
+const filterByRating = ({rating}, products) => {
+    return products.filter(product=>product.rating >= rating)
+}
+
 const applyFilters = (filterState, ...args)=>(products)=>{
     return args.reduce((acc,curr)=>{
         return curr(filterState, acc)
@@ -40,6 +45,7 @@ const applyFilters = (filterState, ...args)=>(products)=>{
 export const getProductList =(filterState, products)=> applyFilters(
     filterState,
     sortByPrice,
+    filterByRating,
 )(products)
 
 export {FilterProvider, useFilter}
