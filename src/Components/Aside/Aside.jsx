@@ -1,7 +1,9 @@
 import React from "react";
+import { useFilter } from "../../context/filter-context";
 import "./Aside.css";
 
 export function Aside() {
+    const {filterState, filterDispatch} = useFilter()
     return (
 
                 <div className="product-content-left-sidebar">
@@ -125,18 +127,19 @@ export function Aside() {
                                 <span className="filters-subheader-title">SORT BY</span>
                                 <div className="checkbox">
                                     <div>
-                                        <input type="radio" className="radio-prod-category" name="radio"></input>
+                                        <input type="radio" className="radio-prod-category" name="radio" checked={filterState.sortby==="LOW-TO-HIGH"} onChange={()=>filterDispatch({type:"SORT_BY", payload:"LOW-TO-HIGH"})}></input>
                                         <label className="radio left-sidebar-label">
                                            High to Low 
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="radio" className="radio-prod-category" name="radio"></input>
+                                        <input type="radio" className="radio-prod-category" name="radio " checked={filterState.sortby==="HIGH-TO-LOW"} onChange={()=>filterDispatch({type:"SORT_BY", payload:"HIGH-TO-LOW"})}></input>
                                         <label className="radio left-sidebar-label">
                                             Low to High
                                         </label>
                                     </div>
                                 </div>
+        
                             </div> 
                         </div> 
                 </aside>
