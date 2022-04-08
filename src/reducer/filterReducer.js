@@ -1,10 +1,11 @@
-import { initialObj } from "../context/filter-context";
-
-export function filterReducer(state, action) {
-  switch (action.type) {
-    case "SORT":
-      return { ...state, sortBy: action.payload };
-    default:
-      return state;
-  }
+export const filterReducer = (filterState, action) => {
+    const initialState = {
+        sortby:"",
+    }
+    switch (action.type){
+        case "SORT_BY":
+            return {...filterState, sortby: action.payload}
+        default:
+           return filterState;
+    }
 }

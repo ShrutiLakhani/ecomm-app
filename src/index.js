@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
-import { makeServer } from "./server";
 import { FilterProvider } from "./context/filter-context";
+import { makeServer } from "./server";
 
 // Call make Server
 makeServer();
@@ -12,9 +12,9 @@ makeServer();
 ReactDOM.render(
    <React.StrictMode>
       <BrowserRouter>
-        <FilterProvider>
+      <FilterProvider>
           <App />
-        </FilterProvider>
+      </FilterProvider>    
     </BrowserRouter >
   </React.StrictMode>,
   document.getElementById("root")

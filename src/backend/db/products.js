@@ -22,7 +22,7 @@ export const products = [
     title: "Michael Kors",
     price: 36000,
     categoryName: "Tote",
-    stars: 4,
+    stars: 4.4,
     inStock: true,
     badge: "New",
     image:
@@ -95,7 +95,7 @@ export const products = [
     title: "Coach",
     price: 24000,
     categoryName: "Footwear",
-    stars: 4,
+    stars: 3,
     inStock: true,
     badge: "New",
     image:
@@ -115,7 +115,7 @@ export const products = [
     title: "Jimmy Choo",
     price: 90000,
     categoryName: "Footwear",
-    stars: 4,
+    stars: 2,
     inStock: true,
     badge: "New",
     image:
@@ -125,7 +125,7 @@ export const products = [
     title: "Gucci",
     price: 28000,
     categoryName: "Footwear",
-    stars: 4,
+    stars: 1,
     inStock: true,
     badge: "New",
     image:
