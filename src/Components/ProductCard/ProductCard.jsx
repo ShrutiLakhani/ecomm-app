@@ -19,6 +19,7 @@ export function ProductCard({products}) {
                                  <h1>{title}</h1>
                                  <h2>{price}</h2>
                                  <h2>{rating}</h2>
+                                 <h2>{categoryName}</h2>
                                  <button className="primary-button-icon-cart">
                                      <Link to="/cart" className="prod-btn-bag-card">       
                                         <span className="material-icons"> shopping_bag</span>ADD TO BAG

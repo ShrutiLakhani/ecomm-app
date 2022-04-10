@@ -9,7 +9,7 @@ export const products = [
   {
     _id: uuid(),
     title: "Michael Kors",
-    price: 50000,
+    price: 100000,
     categoryName: "Tote",
     rating: 4,
     inStock: true,

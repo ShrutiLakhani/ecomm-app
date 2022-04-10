@@ -20,9 +20,12 @@ export function Aside() {
                                <input type="range" 
                                       min={10000} 
                                       max={100000} 
-                                    //   step={50000}
+                                      step={10000}
                                       className="slider-input"
+                                      value={filterState.range}
+                                      onChange={(e)=>filterDispatch({type:"PRICE-RANGE", payload:e.target.value})}
                                       ></input>
+                                      <p>₹10000 to ₹{filterState.range}</p>
                         </div>
                         <div className="left-sidebar-filter-section category-container">
                             <span className="filters-subheader-title">CATEGORIES</span>
