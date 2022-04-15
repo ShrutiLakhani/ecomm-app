@@ -23,33 +23,33 @@ export function Aside() {
                                       step={10000}
                                       className="slider-input"
                                       value={filterState.range}
-                                      onChange={(e)=>filterDispatch({type:"PRICE-RANGE", payload:e.target.value})}
-                                      ></input>
-                                      <p>₹10000 to ₹{filterState.range}</p>
+                                      onChange={(e)=>filterDispatch({type:"PRICE-RANGE", payload:e.target.value})}>
+                               </input>
+                               <p>₹10000 to ₹{filterState.range}</p>
                         </div>
                         <div className="left-sidebar-filter-section category-container">
                             <span className="filters-subheader-title">CATEGORIES</span>
                              <ul className="categories-list">
                                 <li>
-                                    <input type="checkbox" className="input-prod-category"></input>  
+                                    <input type="checkbox" className="input-prod-category" name="cateogry" checked={filterState.category==="Tote"} value="Tote" onChange={(e)=>filterDispatch({type:"CATEGORY", payload:e.target.value})}></input>  
                                     <label className="checkbox left-sidebar-checkbox left-sidebar-label">
                                       Totes
                                     </label>         
                                 </li>
                                 <li>
-                                    <input type="checkbox" className="input-prod-category"></input>
+                                    <input type="checkbox" className="input-prod-category" name="category" checked={filterState.category==="Wallet"} value="Wallet" onChange={(e)=> filterDispatch({type:"CATEGORY",payload:e.target.value})}></input>
                                     <label className="checkbox left-sidebar-checkbox left-sidebar-label">
                                         Wallets
                                     </label>    
                                 </li>
                                 <li>
-                                     <input type="checkbox" className="input-prod-category"></input> 
+                                     <input type="checkbox" className="input-prod-category" checked={filterState.category==="Watches"} value="Watch" onChange={(e)=> filterDispatch({type:"CATEGORY",payload:e.target.value})}></input> 
                                     <label className="checkbox left-sidebar-checkbox left-sidebar-label">
                                        Watches
                                     </label>    
                                 </li>
                                 <li>
-                                    <input type="checkbox" className="input-prod-category"></input>
+                                    <input type="checkbox" className="input-prod-category" checked={filterState.category==="Footwear"} value="Footwear" onChange={(e)=> filterDispatch({type:"CATEGORY",payload:e.target.value})}></input>
                                     <label className="checkbox left-sidebar-checkbox left-sidebar-label">
                                       Footwear
                                     </label>    
@@ -59,25 +59,25 @@ export function Aside() {
                                 <span className="filters-subheader-title">BRAND</span>
                                 <ul className="categories-list">
                                     <li>
-                                     <input type="checkbox" className="input-prod-category"></input>
+                                     <input type="checkbox" className="input-prod-category" value="Michael Kors" checked={filterState.brand==="Michael Kors"} onChange={(e)=>filterDispatch({type:"BRAND", payload: e.target.value})}></input>
                                        <label className="checkbox left-sidebar-checkbox left-sidebar-label">
                                             Michael Kors
                                        </label>
                                     </li>
                                     <li>
-                                         <input type="checkbox" className="input-prod-category"></input>
+                                         <input type="checkbox" className="input-prod-category" value="Coach" checked={filterState.brand==="Coach"} onChange={(e)=>filterDispatch({type:"BRAND", payload:e.target.value})}></input>
                                         <label className="checkbox left-sidebar-checkbox left-sidebar-label">
                                         Coach
                                         </label>  
                                     </li>
                                     <li>
-                                        <input type="checkbox" className="input-prod-category"></input>
+                                        <input type="checkbox" className="input-prod-category" value="Jimmy Choo" checked={filterState.brand==="Jimmy Choo"} onChange={(e)=>filterDispatch({type:"BRAND", payload:e.target.value})}></input>
                                         <label className="checkbox left-sidebar-checkbox left-sidebar-label">
                                             Jimmy Choo
                                         </label>            
                                     </li>
                                     <li>
-                                         <input type="checkbox" className="input-prod-category"></input>
+                                         <input type="checkbox" className="input-prod-category" value="Gucci" checked={filterState.brand==="Gucci"} onChange={(e)=>filterDispatch({type:"BRAND",payload:e.target.value})}></input>
                                         <label className="checkbox left-sidebar-checkbox left-sidebar-label">
                                          Gucci
                                          </label>  
@@ -85,17 +85,6 @@ export function Aside() {
 
                                 </ul>
 
-                            </div>
-                            <div className="left-sidebar-filter-section category-container">
-                                <span className="filters-subheader-title">AVAILABILTY</span>
-                                <ul className="categories-list">
-                                    <li>
-                                        <input type="checkbox" className="input-prod-category"></input>
-                                        <label className="checkbox left-sidebar-checkbox left-sidebar-label">
-                                            Include Out of Stock
-                                        </label>  
-                                    </li>
-                                </ul>
                             </div>
                             <div className="left-sidebar-filter-section category-container">
                                 <span className="filters-subheader-title">RATING</span>

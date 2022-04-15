@@ -7,6 +7,9 @@ const initialState = {
     sortby:"",
     rating:"",
     range: 15000,
+    category:"",
+    brand:"",
+    inStock: false,
 }
 
 const FilterProvider = ({children}) => {
@@ -40,8 +43,11 @@ const filterByRating = ({rating}, products) => {
 const filterByRange = ({range}, products) => {
     return products.filter(product=>product.price <= range)
 }
-const filterByCategory = ({range}, products) => {
-    return products.filter(product=>product.price <= range)
+const filterByCategory = ({category}, products) => {
+     return category.length===0 ? products : products.filter(product => category.includes(product.categoryName))   
+}
+const filterByBrand = ({brand}, products) => {
+     return brand.length===0 ? products : products.filter(product => brand.includes(product.brandName))   
 }
 
 const applyFilters = (filterState, ...args)=>(products)=>{
@@ -56,6 +62,7 @@ export const getProductList =(filterState, products)=> applyFilters(
     filterByRating,
     filterByRange,
     filterByCategory,
+    filterByBrand,
 )(products)
 
 export {FilterProvider, useFilter}
