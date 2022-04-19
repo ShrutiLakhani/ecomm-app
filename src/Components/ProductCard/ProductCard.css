@@ -67,7 +67,7 @@ ins {
 .Wishlist-container .card2-container .badge-style:hover {
   color: red;
 }
-*/ */ .product-section .product-card {
+.product-section .product-card {
   width: 10rem;
   margin-top: 1rem;
   margin-bottom: 0.8rem;
