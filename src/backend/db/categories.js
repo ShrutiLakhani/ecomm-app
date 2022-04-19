@@ -1,5 +1,3 @@
-
-   
 import { v4 as uuid } from "uuid";
 
 /**
@@ -11,21 +9,25 @@ export const categories = [
   {
     _id: uuid(),
     categoryName: "Tote",
-    brandName: "Michael Kors",
+    categoryImage:
+      "https://assets.tatacliq.com/medias/sys_master/images/32285859282974.jpg",
   },
   {
     _id: uuid(),
     categoryName: "Wallet",
-    brandName: "Coach",
+    categoryImage:
+      "https://assets.tatacliq.com/medias/sys_master/images/32285859086366.jpg",
   },
   {
     _id: uuid(),
     categoryName: "Watch",
-    brandName: "Michael Kors",
+    categoryImage:
+      "https://assets.tatacliq.com/medias/sys_master/images/32285859217438.jpg",
   },
   {
     _id: uuid(),
     categoryName: "Footwear",
-    brandName: "Jimmy Choo",
+    categoryImage:
+      "https://assets.tatacliq.com/medias/sys_master/images/32285859414046.jpg",
   },
 ];

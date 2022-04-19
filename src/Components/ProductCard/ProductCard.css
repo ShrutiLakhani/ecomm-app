@@ -1,127 +1,126 @@
 .Wishlist-container .card2-container img {
-    width: 15rem;
-    height: 18rem;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+  width: 15rem;
+  height: 18rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .Wishlist-container .primary-solid-brown {
-    background-color: var(--bg-card-button-color2);
-    width: 1.2rem;
-    height: 1.2rem;
-    border-radius: 50%;
-    border: none;
+  background-color: var(--bg-card-button-color2);
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  border: none;
 }
 
 .Wishlist-container .primary-solid-beige {
-    border-radius: 0.3rem;
-    width: 1.2rem;
-    height: 1.2rem;
-    background-color: var(--bg-card-button-color1);
-    border-radius: 50%;
-    border: none;
+  border-radius: 0.3rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: var(--bg-card-button-color1);
+  border-radius: 50%;
+  border: none;
 }
 
 .Wishlist-container .card2-bottom-section {
-    padding-left: 1rem;
+  padding-left: 1rem;
 }
 
 ins {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .container-shadow {
-    box-shadow: -1px 1px 5px 9px rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
+  box-shadow: -1px 1px 5px 9px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
 }
 
 .Wishlist-container .card2-container .badge-style {
-    font-size: 2rem;
-    position: absolute;
-    left: 80%;
-    top: 1%;
-    color: var(--tertiary-color);
+  font-size: 2rem;
+  position: absolute;
+  left: 80%;
+  top: 1%;
+  color: var(--tertiary-color);
 }
 
 .primary-button-icon-cart {
-    margin-left: 1.6rem;
-    display: flex;
-    background-color: var(--component-black-color);
-    color: white;
-    padding: 0.6rem 2rem;
-    border-radius: 0.3rem;
-    border: 1.5px solid var(--component-black-color);
-    align-items: center;
+  margin-left: 1.1rem;
+  display: flex;
+  background-color: var(--component-black-color);
+  color: white;
+  padding: 0.6rem 2.5rem;
+  border-radius: 0.3rem;
+  border: 1.5px solid var(--component-black-color);
+  align-items: center;
 }
- 
-.prod-btn-bag-card{
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
+
+.prod-btn-bag-card {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
 }
 .primary-button-icon-cart .material-icons {
-    color: var(--component-white-color);
-    vertical-align:sub;
+  color: var(--component-white-color);
+  vertical-align: sub;
 }
 
 .Wishlist-container .card2-container .badge-style:hover {
- color: red;
-} */ */
-
-.product-section .product-card {
-    width: 10rem;
-    margin-top: 1rem;
-    margin-bottom: 0.8rem;
-    margin-right: 9.75px;
-    margin-left: 9.75px;
-    justify-content: space-between;
+  color: red;
+}
+*/ */ .product-section .product-card {
+  width: 10rem;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+  margin-right: 9.75px;
+  margin-left: 9.75px;
+  justify-content: space-between;
 }
 
 .product-card .tab {
-    background-color: var(--secondary-color);
-    padding: 2px 10px;
-    align-self: center;
-    border-radius: 5px;
-    color: #fff;
-    margin-right: 10px;
+  background-color: var(--secondary-color);
+  padding: 2px 10px;
+  align-self: center;
+  border-radius: 5px;
+  color: #fff;
+  margin-right: 10px;
 }
 
 .product-card .img-container .card-img {
-    object-fit: contain;
+  object-fit: contain;
 }
 
 .img-container {
-    height: 200px;
-    position: relative;
+  height: 12.5rem;
+  position: relative;
 }
 
 .img-container .card-tag {
-    background-color: black;
-    position: absolute;
-    width: fit-content;
-    padding: 0.2rem 0.7rem;
-    text-transform: uppercase;
-    color: #fff;
-    font-family: inherit;
-    bottom: 0;
+  background-color: black;
+  position: absolute;
+  width: fit-content;
+  padding: 0.2rem 0.7rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: inherit;
+  bottom: 0;
 }
 
 .product-section .product-card .btn {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .fav-icon:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .fav-icon .fas.fa-heart {
-    color: gray;
+  color: gray;
 }
 
 .fav-icon .fas.fa-heart.red {
-    color: red;
+  color: red;
 }
 
 .fav-icon .fas.fa-heart:hover {
-    color: red;
+  color: red;
 }

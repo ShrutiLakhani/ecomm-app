@@ -1,4 +1,4 @@
-export { Navbar} from "./Navbar/Navbar";
+export { Navbar } from "./Navbar/Navbar";
 export { HeroSection } from "./HeroSection/HeroSection";
 export { CategoryCard } from "./CategoryCard/CategoryCard";
 export { Aside } from "./Aside/Aside";

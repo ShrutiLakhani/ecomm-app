@@ -9,6 +9,7 @@ export const products = [
   {
     _id: uuid(),
     title: "Michael Kors",
+    description: "Marilyn Medium Logo Tote Bag",
     price: 100000,
     categoryName: "Tote",
     brandName: "Michael Kors",
@@ -21,6 +22,7 @@ export const products = [
   {
     _id: uuid(),
     title: "Michael Kors",
+    description: "Karlie Medium Leather Satchel",
     price: 36000,
     categoryName: "Tote",
     brandName: "Michael Kors",
@@ -28,14 +30,15 @@ export const products = [
     inStock: true,
     badge: "New",
     image:
-    "https://img.tatacliq.com/images/i7/658Wx734H/MP000000011399861_658Wx734H_202112091826371.jpeg",
+      "https://img.tatacliq.com/images/i7/658Wx734H/MP000000011399861_658Wx734H_202112091826371.jpeg",
   },
   {
-     title: "Coach",
+    title: "Coach",
     price: 46000,
+    description: "Freya Large Pebbled Leather Tote Bag",
     categoryName: "Tote",
     brandName: "Coach",
-    rating: 4,
+    rating: 3,
     inStock: true,
     badge: "New",
     image:
@@ -44,6 +47,7 @@ export const products = [
   {
     title: "Coach",
     price: 34000,
+    description: "Phoebe Large Logo and Pebbled Leather Tote Bag",
     categoryName: "Tote",
     brandName: "Coach",
     rating: 4,
@@ -54,11 +58,12 @@ export const products = [
   },
   {
     _id: uuid(),
-     title: "Coach",
+    title: "Coach",
     price: 16500,
+    description: "Crossgrain Leather Continental Wristlet",
     categoryName: "Wallet",
     brandName: "Coach",
-    rating: 4,
+    rating: 3,
     inStock: true,
     badge: "New",
     image:
@@ -68,6 +73,7 @@ export const products = [
     _id: uuid(),
     title: "Michael Kors",
     price: 24000,
+    description: "Leather Continental Wristlet",
     categoryName: "Wallet",
     brandName: "Michael Kors",
     rating: 4,
@@ -80,9 +86,10 @@ export const products = [
     _id: uuid(),
     title: "Coach",
     price: 22500,
+    description: "Adele Pebbled Leather Smartphone Wallet",
     categoryName: "Watch",
     brandName: "Coach",
-    rating: 4,
+    rating: 2,
     inStock: true,
     badge: "New",
     image:
@@ -91,6 +98,7 @@ export const products = [
   {
     title: "Michael Kors",
     price: 14500,
+    description: "Oversized Lennox Pavé Rose Gold-Tone Watch",
     categoryName: "Watch",
     brandName: "Michael Kors",
     rating: 4,
@@ -102,6 +110,7 @@ export const products = [
   {
     title: "Coach",
     price: 24000,
+    description: "Mini Camille Pavé Two-Tone Watch",
     categoryName: "Footwear",
     brandName: "Coach",
     rating: 3,
@@ -113,9 +122,10 @@ export const products = [
   {
     title: "Michael Kors",
     price: 17000,
+    description: "Alice Logo Ballet Flat",
     categoryName: "Footwear",
     brandName: "Michael Kors",
-    rating: 4,
+    rating: 2,
     inStock: true,
     badge: "New",
     image:
@@ -123,10 +133,12 @@ export const products = [
   },
   {
     title: "Jimmy Choo",
+    description: " ",
     price: 90000,
+    description: "Kelli Embellished Logo Sandal",
     categoryName: "Footwear",
     brandName: "Jimmy Choo",
-    rating: 2,
+    rating: 1,
     inStock: false,
     badge: "New",
     image:
@@ -135,6 +147,7 @@ export const products = [
   {
     title: "Gucci",
     price: 28000,
+    description: "Dorothy Flex Leather Pump",
     categoryName: "Footwear",
     brandName: "Gucci",
     rating: 1,

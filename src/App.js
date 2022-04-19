@@ -1,5 +1,5 @@
 import "./App.css";
-import { Navbar} from "./Components/index.js"
+import { Navbar } from "./Components/index.js";
 import { Routes, Route, Link } from "react-router-dom";
 import {
   HomePage,
@@ -13,18 +13,18 @@ import {
 function App() {
   return (
     <>
-    <div>
-      <Navbar/>
-      <Routes>
+      <div>
+        <Navbar />
+        <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="wishlist" element={<WishlistPage />} />
-          <Route path="cart" element={<CartPage />} /> 
+          <Route path="cart" element={<CartPage />} />
           <Route path="login" element={<LoginPage />} />
-          <Route path="signup" element={<SignupPage />} /> 
-          <Route path="product" element={<ProductPage />} /> 
+          <Route path="signup" element={<SignupPage />} />
+          <Route path="product" element={<ProductPage />} />
         </Routes>
-    </div>
+      </div>
     </>
-  )
+  );
 }
 export default App;
