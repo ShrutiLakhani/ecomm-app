@@ -10,8 +10,8 @@ export function LoginPage() {
   const [showPwd, setShowPwd] = useState(false);
 
   const testUser = {
-    email: "theMarauders@gmail.com",
-    password: "FortunaMajor",
+    email: "adarshbalika@gmail.com",
+    password: "adarshbalika",
   };
 
   function setUserData(e) {
@@ -27,10 +27,11 @@ export function LoginPage() {
   const submitLoginData = async (loginData) => {
     try {
       const response = await axios.post("/api/auth/login", loginData);
+      console.log(response);
       if (response.status === 200) {
         const userToken = response.data.encodedToken;
         localStorage.setItem("userToken", userToken);
-        navigate("/products");
+        navigate("/product");
       }
     } catch (error) {
       setLoginError("An error occurred.");
@@ -38,7 +39,8 @@ export function LoginPage() {
     }
   };
 
-  const guestLogin = () => {
+  const guestLogin = (e) => {
+    e.preventDefault();
     submitLoginData(testUser);
   };
 
@@ -61,7 +63,7 @@ export function LoginPage() {
               <label className="input-label">Password</label>
               <input
                 className="form-input-container"
-                type="text"
+                type="password"
                 placeholder="**********"
                 onChange={setUserData}
               />
@@ -80,7 +82,7 @@ export function LoginPage() {
             <button className="button-login-form border-style">LOGIN</button>
             <button
               className="button-login-form border-style"
-              onClick={() => guestLogin()}
+              onClick={(e) => guestLogin(e)}
             >
               Test User
             </button>
