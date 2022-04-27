@@ -84,7 +84,7 @@ export function LoginPage() {
               className="button-login-form border-style"
               onClick={(e) => guestLogin(e)}
             >
-              Test User
+              GUEST LOGIN
             </button>
             <Link to="/signup" className="btn-sign-up button-link">
               Create New Account <i class="fas fa-chevron-right"></i>
