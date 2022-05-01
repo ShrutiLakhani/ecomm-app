@@ -75,11 +75,12 @@ export function LoginPage() {
               <input className="style-input-checkbox" type="checkbox" />{" "}
               Remember me
             </p>
-
-            {/* <Link to="#" className="button-login-form border-style">
-              Login
-            </Link> */}
-            <button className="button-login-form border-style">LOGIN</button>
+            <button
+              className="button-login-form border-style"
+              onClick={(e) => handleLogin(e)}
+            >
+              LOGIN
+            </button>
             <button
               className="button-login-form border-style"
               onClick={(e) => guestLogin(e)}

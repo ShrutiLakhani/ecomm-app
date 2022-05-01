@@ -45,7 +45,6 @@ const filterByRange = ({ range }, products) => {
   return products.filter((product) => product.price <= range);
 };
 const filterByCategory = ({ category }, products) => {
-  console.log({ category });
   return category.length === 0
     ? products
     : products.filter((product) => category.includes(product.categoryName));

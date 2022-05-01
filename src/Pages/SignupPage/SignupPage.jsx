@@ -13,11 +13,6 @@ export function SignupPage() {
     password: "",
   });
 
-  // const [showPassword, setShowPassword] = useState({
-  //   password: false,
-  //   confirmPassword: false,
-  // });
-
   function setUserData(e) {
     e.preventDefault();
     const { name, value } = e.target;
@@ -74,9 +69,6 @@ export function SignupPage() {
               <input type="checkbox" className="checkbox" />
               <span>I accept all Terms and Conditions</span>
             </div>
-            {/* <Link to="#" className="button-signup-form border-style">
-              Create New Account
-            </Link> */}
             <button
               className="button-login-form border-style"
               type="submit"
