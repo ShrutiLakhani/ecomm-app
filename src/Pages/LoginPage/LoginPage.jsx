@@ -13,11 +13,16 @@ export function LoginPage() {
     password: "adarshbalika",
   };
 
-  function setUserData(e) {
-    const { name, value } = e.target;
-    setLoginData((prev) => ({ ...prev, [name]: value }));
-  }
+  //   function setUserData(e) {
+  //     const { name, value } = e.target;
+  //     setLoginData((prev) => ({ ...prev, [name]: value }));
+  //   }
 
+  const setUserData = (name) => {
+    return ({ target: { value } }) => {
+      setLoginData((oldValues) => ({ ...oldValues, [name]: value }));
+    };
+  };
   const handleLogin = (e) => {
     e.preventDefault();
     submitLoginData(loginData);
@@ -47,7 +52,7 @@ export function LoginPage() {
     <main className="signup-wrapper">
       <section className="login-page-bottom-container">
         <div className="login-container">
-          <form className="login-form">
+          <form className="login-form" onSubmit={handleLogin}>
             <h1>Login</h1>
             <div>
               <label className="input-label">Email address</label>
@@ -56,7 +61,7 @@ export function LoginPage() {
                 type="text"
                 placeholder="xyz@gmail.com"
                 value={loginData.email}
-                onChange={setUserData}
+                onChange={setUserData("email")}
               />
             </div>
             <div>
@@ -65,7 +70,8 @@ export function LoginPage() {
                 className="form-input-container"
                 type="password"
                 placeholder="**********"
-                onChange={setUserData}
+                value={loginData.password}
+                onChange={setUserData("password")}
               />
             </div>
             <div className="forgot-pswrd-link">
@@ -77,7 +83,7 @@ export function LoginPage() {
             </p>
             <button
               className="button-login-form border-style"
-              onClick={(e) => handleLogin(e, loginData)}
+              //   onClick={(e) => handleLogin(e, loginData)}
             >
               LOGIN
             </button>
