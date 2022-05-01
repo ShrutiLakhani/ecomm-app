@@ -9,18 +9,22 @@ export function SignupPage() {
   const navigate = useNavigate();
   const [signUpError, setSignUpError] = useState("");
   const [signUpData, setSignUpData] = useState({
-    email: "",
-    password: "",
+    email: " ",
+    password: " ",
   });
 
-  function setUserData(e) {
-    e.preventDefault();
-    const { name, value } = e.target;
-    setSignUpData((prev) => ({ ...prev, [name]: value }));
-  }
+  // function setUserData(e) {
+  //   const { name, value } = e.target;
+  //   setSignUpData((prev) => ({ ...prev, [name]: value }));
+  // }
+
+  const setUserData = (name) => {
+    return ({ target: { value } }) => {
+      setSignUpData((oldValues) => ({ ...oldValues, [name]: value }));
+    };
+  };
 
   const handleSubmit = (e) => {
-    console.log(e);
     e.preventDefault();
     sendSignUpData(signUpData);
   };
@@ -28,7 +32,6 @@ export function SignupPage() {
   async function sendSignUpData(data) {
     try {
       const response = await axios.post("/api/auth/signup", data);
-      console.log(response);
       if (response.status === 201) {
         const { data } = response;
         const userToken = data.encodedToken;
@@ -45,15 +48,17 @@ export function SignupPage() {
     <main className="signup-wrapper">
       <section className="login-page-bottom-container">
         <div className="login-container">
-          <form className="login-form">
+          <form className="login-form" onSubmit={handleSubmit}>
             <h1>Signup</h1>
             <div>
               <label className="input-label">Email address</label>
               <input
                 className="form-input-container"
                 type="text"
+                required
                 placeholder="xyz@gmail.com"
-                onChange={setUserData}
+                value={signUpData.email}
+                onChange={setUserData("email")}
               ></input>
             </div>
             <div>
@@ -61,8 +66,10 @@ export function SignupPage() {
               <input
                 className="form-input-container"
                 type="text"
+                required
                 placeholder="**********"
-                onChange={setUserData}
+                value={signUpData.password}
+                onChange={setUserData("password")}
               ></input>
             </div>
             <div className="form-bottom-section">
@@ -72,7 +79,7 @@ export function SignupPage() {
             <button
               className="button-login-form border-style"
               type="submit"
-              onClick={(e) => handleSubmit(e, signUpData)}
+              // onClick={(e) => handleSubmit(e, signUpData)}
             >
               CREATE NEW ACCOUNT
             </button>

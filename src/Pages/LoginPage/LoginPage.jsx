@@ -7,7 +7,6 @@ export function LoginPage() {
   const navigate = useNavigate();
   const [loginData, setLoginData] = useState({ email: "", password: "" });
   const [loginError, setLoginError] = useState("");
-  const [showPwd, setShowPwd] = useState(false);
 
   const testUser = {
     email: "adarshbalika@gmail.com",
@@ -56,6 +55,7 @@ export function LoginPage() {
                 className="form-input-container"
                 type="text"
                 placeholder="xyz@gmail.com"
+                value={loginData.email}
                 onChange={setUserData}
               />
             </div>
@@ -77,7 +77,7 @@ export function LoginPage() {
             </p>
             <button
               className="button-login-form border-style"
-              onClick={(e) => handleLogin(e)}
+              onClick={(e) => handleLogin(e, loginData)}
             >
               LOGIN
             </button>
