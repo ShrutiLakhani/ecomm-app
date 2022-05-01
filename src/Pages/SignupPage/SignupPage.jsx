@@ -9,8 +9,8 @@ export function SignupPage() {
   const navigate = useNavigate();
   const [signUpError, setSignUpError] = useState("");
   const [signUpData, setSignUpData] = useState({
-    email: " ",
-    password: " ",
+    email: "",
+    password: "",
   });
 
   // function setUserData(e) {
@@ -26,6 +26,7 @@ export function SignupPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Hello");
     sendSignUpData(signUpData);
   };
 
@@ -59,7 +60,7 @@ export function SignupPage() {
                 placeholder="xyz@gmail.com"
                 value={signUpData.email}
                 onChange={setUserData("email")}
-              ></input>
+              />
             </div>
             <div>
               <label className="input-label">Password</label>
@@ -70,7 +71,7 @@ export function SignupPage() {
                 placeholder="**********"
                 value={signUpData.password}
                 onChange={setUserData("password")}
-              ></input>
+              />
             </div>
             <div className="form-bottom-section">
               <input type="checkbox" className="checkbox" />
