@@ -13,11 +13,6 @@ export function LoginPage() {
     password: "adarshbalika",
   };
 
-  //   function setUserData(e) {
-  //     const { name, value } = e.target;
-  //     setLoginData((prev) => ({ ...prev, [name]: value }));
-  //   }
-
   const setUserData = (name) => {
     return ({ target: { value } }) => {
       setLoginData((oldValues) => ({ ...oldValues, [name]: value }));
@@ -81,12 +76,7 @@ export function LoginPage() {
               <input className="style-input-checkbox" type="checkbox" />{" "}
               Remember me
             </p>
-            <button
-              className="button-login-form border-style"
-              //   onClick={(e) => handleLogin(e, loginData)}
-            >
-              LOGIN
-            </button>
+            <button className="button-login-form border-style">LOGIN</button>
             <button
               className="button-login-form border-style"
               onClick={(e) => guestLogin(e)}

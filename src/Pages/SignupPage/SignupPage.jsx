@@ -12,12 +12,6 @@ export function SignupPage() {
     email: "",
     password: "",
   });
-
-  // function setUserData(e) {
-  //   const { name, value } = e.target;
-  //   setSignUpData((prev) => ({ ...prev, [name]: value }));
-  // }
-
   const setUserData = (name) => {
     return ({ target: { value } }) => {
       setSignUpData((oldValues) => ({ ...oldValues, [name]: value }));
@@ -77,11 +71,7 @@ export function SignupPage() {
               <input type="checkbox" className="checkbox" />
               <span>I accept all Terms and Conditions</span>
             </div>
-            <button
-              className="button-login-form border-style"
-              type="submit"
-              // onClick={(e) => handleSubmit(e, signUpData)}
-            >
+            <button className="button-login-form border-style" type="submit">
               CREATE NEW ACCOUNT
             </button>
             <Link to="/login">
