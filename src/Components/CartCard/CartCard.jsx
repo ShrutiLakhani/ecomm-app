@@ -1,7 +1,10 @@
 import React from "react";
 import "./CartCard.css";
 import { Link } from "react-router-dom";
-export function CartCard() {
+import { useCart } from "../../context/cart-context";
+import { useWishlist } from "../../context/wishlist-context";
+
+export function CartCard({ cartItem }) {
   return (
     <div className="cart-card">
       <div className="card-container">
