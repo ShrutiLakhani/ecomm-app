@@ -3,10 +3,11 @@ import "./WishlistCard.css";
 import { Link } from "react-router-dom";
 import { useWishlist } from "../../context/wishlist-context";
 import { useCart } from "../../context/cart-context";
-export function WishlistCard({ items }) {
+export function WishlistCard(items) {
   const { cart, addToCart } = useCart();
   const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
-  const { image, title, description, price, rating } = items;
+  //   const { image, title, description, price, rating } = items;
+  console.log(items);
 
   function moveToCart(product) {
     addToCart(product);
@@ -17,17 +18,17 @@ export function WishlistCard({ items }) {
       <div className="product-list">
         <div className="Wishlist-container">
           <div className="card2-container">
-            <Link to="#" className=" wishlist-card card-closebtn">
+            {/* <Link to="#" className=" wishlist-card card-closebtn">
               &times;
-            </Link>
-            <img src={image} alt="image-bag" />
+            </Link> */}
+            {/* <img src={image} alt="image-bag" />
             <h1>{title}</h1>
             <h2>{description}</h2>
-            <h5>{price}</h5>
+            <h5>{price}</h5> */}
             <div class="divider-sidebar"></div>
             {wishlist.find((item) => item._id === items._id) ? (
               <button
-                className="btn-bag-card"
+                className="wishlist-card card-closebtn"
                 onClick={() => removeFromWishlist(items)}
               >
                 <span className="material-icons md-24 material-icons-outlined">
