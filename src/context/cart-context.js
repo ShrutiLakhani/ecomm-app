@@ -21,6 +21,7 @@ const CartProvider = ({ children }) => {
   const userToken = localStorage.getItem("userToken");
 
   const [cartState, cartDispatch] = useReducer(cartReducer, initialCartState);
+  console.log(cartState);
 
   const getCart = async () => {
     try {
@@ -30,7 +31,7 @@ const CartProvider = ({ children }) => {
         },
       });
       if (response.status === 200 || response.status === 201) {
-        cartDispatch({ type: "GET_CART", payload: response?.data?.cart });
+        cartDispatch({ type: "GET_CART", payload: response.data.cart });
       }
     } catch (error) {
       console.log(error);
@@ -59,6 +60,7 @@ const CartProvider = ({ children }) => {
           if (response.status === 201) {
             cartDispatch({ type: "ADD_TO_CART", payload: response.data.cart });
             console.log("Product added to Cart");
+            console.log({ cartState });
           }
         } catch (error) {
           console.log(error);
@@ -123,7 +125,7 @@ const CartProvider = ({ children }) => {
 
   const decrementCart = async (product) => {
     if (loggedIn) {
-      if (product.qty === 1) {
+      if (product.quantity === 1) {
         deleteFromCart(product);
       } else {
         try {

@@ -10,18 +10,18 @@ export function WishlistPage() {
     <>
       <main className="page-wrapper">
         <div class="product-page">
-          <div class="wishlist-head">
-            <h1 className="page-title">My Wishlist</h1>
-            {wishlist.length === 0 ? (
-              <h1 className="page-subtitle_wishlist">Wishist list empty :(</h1>
-            ) : (
-              <div className="wishlist-section">
-                {wishlist.map((item) => (
-                  <WishlistCard {...item} />
-                ))}
-              </div>
-            )}
-          </div>
+          <div class="wishlist-head">My Wishlist</div>
+          {wishlist.length === 0 ? (
+            <div className="wishlist-empty-section">
+              <h1>Wishist list empty 😔</h1>
+            </div>
+          ) : (
+            <div className="wishlist-section">
+              {wishlist.map((item) => (
+                <WishlistCard {...item} />
+              ))}
+            </div>
+          )}
         </div>
       </main>
     </>

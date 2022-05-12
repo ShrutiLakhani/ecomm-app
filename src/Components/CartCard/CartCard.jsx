@@ -5,9 +5,10 @@ import { useCart } from "../../context/cart-context";
 import { useWishlist } from "../../context/wishlist-context";
 
 export function CartCard({ cartItem }) {
-  const { image, title, description, price, rating } = cartItem;
+  const { image, title, description, price, qty } = cartItem;
   const { deleteFromCart, incrementCart, decrementCart } = useCart();
   const { addToWishlist } = useWishlist();
+  console.log(cartItem);
 
   const moveToWishlist = (cartItem) => {
     addToWishlist(cartItem);
@@ -25,16 +26,20 @@ export function CartCard({ cartItem }) {
             <h3>{title}</h3>
             <p>{description}</p>
             <div className="quantity">
-              <label for="quantity">Qty</label>
-              <input
-                className="cart-quantity"
-                type="number"
-                id="quantity"
-                name="quantity"
-                min="1"
-                max="5"
-                placeholder="1"
-              ></input>
+              <label for="quantity">Quantity</label>
+              <button
+                className="qty-button"
+                onClick={() => incrementCart(cartItem)}
+              >
+                +
+              </button>
+              <span className="item-qty">{qty}</span>
+              <button
+                className="qty-button"
+                onClick={() => decrementCart(cartItem)}
+              >
+                -
+              </button>
             </div>
             <div>{price}</div>
             <i

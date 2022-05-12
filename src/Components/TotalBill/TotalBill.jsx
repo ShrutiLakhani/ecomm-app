@@ -5,13 +5,8 @@ import { useCart } from "../../context/cart-context";
 
 import "./TotalBill.css";
 export function TotalBill() {
-  const {
-    cartCount,
-    cartTotalPrice,
-    cartTotalDiscount,
-    cartFinalAmout,
-    checkOut,
-  } = useCart();
+  const { cartCount, cartTotalPrice, cartFinalAmout } = useCart();
+  console.log(cartCount);
 
   return (
     <div class="price-total">
@@ -20,10 +15,6 @@ export function TotalBill() {
         <div class="price-breakdown">
           <span>Price ({cartCount} Items)</span>
           <span>₹ {cartTotalPrice}</span>
-        </div>
-        <div class="price-breakdown">
-          <span>Discount</span>
-          <span>₹ 4,000</span>
         </div>
         <div class="price-breakdown">
           <span>Coupon Discount</span>

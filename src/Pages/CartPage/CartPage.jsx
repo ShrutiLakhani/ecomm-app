@@ -18,10 +18,10 @@ export function CartPage() {
               ) : (
                 cart.map((item) => <CartCard cartItem={item} key={item._id} />)
               )}
+              {cart?.length === 0 ? "" : <TotalBill />}
             </div>
           </div>
         </div>
-        {cart?.length === 0 ? "" : <TotalBill />}
       </main>
     </>
   );
