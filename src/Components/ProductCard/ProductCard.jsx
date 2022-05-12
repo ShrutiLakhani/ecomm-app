@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import { useCart } from "../../context/cart-context";
-// import { useWishlist } from "../../context/wishlist-context";
-
+import { useCart } from "../../context/cart-context";
+import { useWishlist } from "../../context/wishlist-context";
 import "./ProductCard.css";
 export function ProductCard({ products }) {
+  const { cart, addToCart } = useCart();
+  const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
+
   const {
     title,
     image,
@@ -21,21 +23,36 @@ export function ProductCard({ products }) {
       <div className="product-list">
         <div className="Wishlist-container">
           <div className="card2-container wishlist-card">
-            <Link to="/wishlist">
-              <span>
-                <i className="far fa-heart fa-sm badge-style"></i>
-              </span>
-            </Link>
+            {wishlist.find((item) => item._id === products._id) ? (
+              <i
+                className="far fa-heart badge-style"
+                onClick={() => removeFromWishlist(products(_id))}
+              ></i>
+            ) : (
+              <i
+                className="far fa-heart badge-style"
+                onClick={() => addToWishlist(products)}
+              ></i>
+            )}
             <img src={image} alt="" />
             <h1>{title}</h1>
             <p>{description}</p>
             <h5>₹{price}</h5>
             <h5>{rating}*</h5>
-            <button className="primary-button-icon-cart">
-              <Link to="/cart" className="prod-btn-bag-card">
-                <span className="material-icons"> shopping_bag</span>ADD TO BAG
-              </Link>
-            </button>
+            {cart.find((item) => item._id === products._id) ? (
+              <i className="prod-btn-bag-card">
+                <Link className="chg-color" to="/cart">
+                  Go to Cart
+                </Link>
+              </i>
+            ) : (
+              <i
+                className="prod-btn-bag-card"
+                onClick={() => addToCart(products)}
+              >
+                MOVE TO BAG
+              </i>
+            )}
           </div>
         </div>
       </div>

@@ -55,6 +55,12 @@ ins {
 }
 
 .prod-btn-bag-card {
+  padding: 0.6rem 2.5rem;
+  border-radius: 0.3rem;
+  border: 1.5px solid var(--component-black-color);
+  align-items: center;
+  margin-left: 1.1rem;
+  background-color: var(--component-black-color);
   color: white;
   text-decoration: none;
   font-size: 1rem;
@@ -123,4 +129,9 @@ ins {
 
 .fav-icon .fas.fa-heart:hover {
   color: red;
+}
+
+.prod-btn-bag-card .chg-color {
+  color: var(--component-white-color);
+  text-decoration: none;
 }

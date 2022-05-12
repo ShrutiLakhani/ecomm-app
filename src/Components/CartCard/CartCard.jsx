@@ -5,20 +5,25 @@ import { useCart } from "../../context/cart-context";
 import { useWishlist } from "../../context/wishlist-context";
 
 export function CartCard({ cartItem }) {
+  const { image, title, description, price, rating } = cartItem;
+  const { deleteFromCart, incrementCart, decrementCart } = useCart();
+  const { addToWishlist } = useWishlist();
+
+  const moveToWishlist = (cartItem) => {
+    addToWishlist(cartItem);
+    deleteFromCart(cartItem);
+  };
+
   return (
     <div className="cart-card">
       <div className="card-container">
         <div className="card-top-section">
           <div className="image-box">
-            <img
-              src="https://michaelkors.scene7.com/is/image/MichaelKors/30F1G9HS7B-1335_1?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90"
-              alt="bag-image"
-            />
+            <img src={image} alt="{title}" />
           </div>
           <div className="card-details">
-            <h3>Michael Kors</h3>
-            <p>MICHAEL Brown & Acorn Carmen Small Satchel</p>
-            <p>Brown</p>
+            <h3>{title}</h3>
+            <p>{description}</p>
             <div className="quantity">
               <label for="quantity">Qty</label>
               <input
@@ -31,18 +36,21 @@ export function CartCard({ cartItem }) {
                 placeholder="1"
               ></input>
             </div>
-            <div>₹ 31,500</div>
-            <Link to="#" className="card-bottom-section-link">
+            <div>{price}</div>
+            <i
+              onClick={() => deleteFromCart(cartItem)}
+              className="card-bottom-section-link"
+            >
               Remove
-            </Link>
+            </i>
             <span>|</span>
-            <Link to="/wishlist" className="card-bottom-section-link">
+            <i
+              onClick={() => moveToWishlist(cartItem)}
+              className="card-bottom-section-link"
+            >
               Move to wishlist
-            </Link>
+            </i>
           </div>
-          <Link to="#" className="card-closebtn">
-            &times;
-          </Link>
         </div>
       </div>
     </div>
