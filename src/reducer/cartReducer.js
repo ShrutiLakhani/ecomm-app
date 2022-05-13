@@ -4,7 +4,7 @@ export const cartReducer = (cartState, { type, payload }) => {
     cartCount: 0,
     cartTotalPrice: 0,
     cartTotalDiscount: 0,
-    cartFinalAmout: 0,
+    cartFinalAmount: 0,
   };
 
   switch (type) {
@@ -22,10 +22,10 @@ export const cartReducer = (cartState, { type, payload }) => {
         ),
         cartTotalDiscount: payload.reduce(
           (acc, curr) =>
-            (acc += (curr.price.original - curr.price.discounted) * curr.qty),
+            (acc += (curr.price - curr.price.discounted) * curr.qty),
           0
         ),
-        cartFinalAmout: payload.reduce(
+        cartFinalAmount: payload.reduce(
           (acc, curr) => (acc += curr.price * curr.qty),
           0
         ),

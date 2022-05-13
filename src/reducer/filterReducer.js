@@ -15,7 +15,6 @@ export const filterReducer = (filterState, action) => {
       return { ...filterState, range: action.payload };
     case "CATEGORY":
       const { category } = filterState;
-      console.log({ category });
       return category.includes(action.payload)
         ? {
             ...filterState,

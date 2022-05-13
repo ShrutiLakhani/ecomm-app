@@ -15,13 +15,12 @@ const CartProvider = ({ children }) => {
     cartCount: 0,
     cartTotalPrice: 0,
     cartTotalDiscount: 0,
-    cartFinalAmout: 0,
+    cartFinalAmount: 0,
   };
 
   const userToken = localStorage.getItem("userToken");
 
   const [cartState, cartDispatch] = useReducer(cartReducer, initialCartState);
-  console.log(cartState);
 
   const getCart = async () => {
     try {
@@ -168,7 +167,7 @@ const CartProvider = ({ children }) => {
         cartCount: cartState.cartCount,
         cartTotalPrice: cartState.cartTotalPrice,
         cartTotalDiscount: cartState.cartTotalDiscount,
-        cartFinalAmout: cartState.cartFinalAmout,
+        cartFinalAmount: cartState.cartFinalAmount,
         addToCart,
         deleteFromCart,
         incrementCart,

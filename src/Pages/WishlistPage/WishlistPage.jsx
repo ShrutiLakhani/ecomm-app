@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { useWishlist } from "../../context/wishlist-context";
 export function WishlistPage() {
   const { wishlist } = useWishlist();
-  console.log("WishlistPage", wishlist);
   return (
     <>
       <main className="page-wrapper">
