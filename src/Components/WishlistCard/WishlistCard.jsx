@@ -18,9 +18,6 @@ export function WishlistCard(items) {
       <div className="product-list">
         <div className="Wishlist-container">
           <div className="card2-container">
-            {/* <Link to="#" className=" wishlist-card card-closebtn">
-              &times;
-            </Link>  */}
             <img src={image} alt="image-bag" />
             <h1>{title}</h1>
             <h2>{description}</h2>

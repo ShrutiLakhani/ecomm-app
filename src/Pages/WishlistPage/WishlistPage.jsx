@@ -9,14 +9,14 @@ export function WishlistPage() {
   return (
     <>
       <main className="page-wrapper">
-        <div class="product-page">
+        <div class="wishlist-page">
           <div class="wishlist-head">My Wishlist</div>
           {wishlist.length === 0 ? (
             <div className="wishlist-empty-section">
               <h1>Wishist list empty 😔</h1>
             </div>
           ) : (
-            <div className="wishlist-section">
+            <div className="wishlist-container">
               {wishlist.map((item) => (
                 <WishlistCard {...item} />
               ))}

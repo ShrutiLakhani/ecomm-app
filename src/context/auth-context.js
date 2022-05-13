@@ -1,5 +1,7 @@
 import { createContext, useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "./cart-context";
+import { useWishlist } from "./wishlist-context";
 
 const AuthContext = createContext();
 const useAuth = () => useContext(AuthContext);
@@ -15,14 +17,16 @@ const AuthProvider = ({ children }) => {
     }
   }, [userToken]);
 
-  const logoutHandler = () => {
-    localStorage.removeItem("userToken");
-    setLoggedIn(false);
-    navigate("/");
-  };
+  // const logoutHandler = () => {
+  //   localStorage.removeItem("userToken");
+  //   setLoggedIn(false);
+  //   setCartData([]);
+  //   setWishlistData([]);
+  //   navigate("/");
+  // };
 
   return (
-    <AuthContext.Provider value={{ loggedIn, setLoggedIn, logoutHandler }}>
+    <AuthContext.Provider value={{ loggedIn, setLoggedIn }}>
       {children}
     </AuthContext.Provider>
   );

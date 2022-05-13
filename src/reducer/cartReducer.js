@@ -6,7 +6,6 @@ export const cartReducer = (cartState, { type, payload }) => {
     cartTotalDiscount: 0,
     cartFinalAmout: 0,
   };
-  console.log(initialCartState);
 
   switch (type) {
     case "ADD_TO_CART":
@@ -16,19 +15,18 @@ export const cartReducer = (cartState, { type, payload }) => {
       return {
         ...cartState,
         cart: payload,
-        cartCount: payload.reduce((acc, curr) => (acc += curr.quantity), 0),
+        cartCount: payload.reduce((acc, curr) => (acc += curr.qty), 0),
         cartTotalPrice: payload.reduce(
-          (acc, curr) => (acc += curr.price.original * curr.quantity),
+          (acc, curr) => (acc += curr.price * curr.qty),
           0
         ),
         cartTotalDiscount: payload.reduce(
           (acc, curr) =>
-            (acc +=
-              (curr.price.original - curr.price.discounted) * curr.quantity),
+            (acc += (curr.price.original - curr.price.discounted) * curr.qty),
           0
         ),
         cartFinalAmout: payload.reduce(
-          (acc, curr) => (acc += curr.price.discounted * curr.quantity),
+          (acc, curr) => (acc += curr.price * curr.qty),
           0
         ),
       };

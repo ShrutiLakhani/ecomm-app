@@ -9,15 +9,21 @@ export function CartPage() {
   return (
     <>
       <main className="page-wrapper">
-        <div class="product-page">
-          <div class="wishlist-head">
-            My Cart
-            <div className="product-content-container">
-              {cart?.length === 0 ? (
-                <h1 className="page-subtitle_wishlist">Bag is empty :(</h1>
-              ) : (
-                cart.map((item) => <CartCard cartItem={item} key={item._id} />)
-              )}
+        <div className="cart-page">
+          <div className="cart-container">
+            <div class="wishlist-head">
+              My Cart
+              <div className="cart-card-container">
+                {cart?.length === 0 ? (
+                  <div className="cart-empty-section">
+                    <h1>Bag is empty 😔</h1>
+                  </div>
+                ) : (
+                  cart.map((item) => (
+                    <CartCard cartItem={item} key={item._id} />
+                  ))
+                )}
+              </div>
               {cart?.length === 0 ? "" : <TotalBill />}
             </div>
           </div>

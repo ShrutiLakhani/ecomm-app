@@ -60,7 +60,6 @@ const CartProvider = ({ children }) => {
           if (response.status === 201) {
             cartDispatch({ type: "ADD_TO_CART", payload: response.data.cart });
             console.log("Product added to Cart");
-            console.log({ cartState });
           }
         } catch (error) {
           console.log(error);
