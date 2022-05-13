@@ -33,6 +33,7 @@ export const products = [
       "https://img.tatacliq.com/images/i7/658Wx734H/MP000000011399861_658Wx734H_202112091826371.jpeg",
   },
   {
+    _id: uuid(),
     title: "Coach",
     price: 46000,
     description: "Freya Large Pebbled Leather Tote Bag",
@@ -45,6 +46,7 @@ export const products = [
       "https://img.tatacliq.com/images/i7/658Wx734H/MP000000008199471_658Wx734H_202011150127351.jpeg",
   },
   {
+    _id: uuid(),
     title: "Coach",
     price: 34000,
     description: "Phoebe Large Logo and Pebbled Leather Tote Bag",
@@ -96,6 +98,7 @@ export const products = [
       "https://img.tatacliq.com/images/i4/658Wx734H/MP000000006768229_658Wx734H_20200325122144.jpeg",
   },
   {
+    _id: uuid(),
     title: "Michael Kors",
     price: 14500,
     description: "Oversized Lennox Pavé Rose Gold-Tone Watch",
@@ -108,6 +111,7 @@ export const products = [
       "https://img.tatacliq.com/images/i7/658Wx734H/MP000000010121519_658Wx734H_202107301823331.jpeg",
   },
   {
+    _id: uuid(),
     title: "Coach",
     price: 24000,
     description: "Mini Camille Pavé Two-Tone Watch",
@@ -120,6 +124,7 @@ export const products = [
       "https://assets.ajio.com/medias/sys_master/root/20220318/hfDu/623392f0aeb26921afe18dcc/-473Wx593H-410311256-rfw-MODEL3.jpg",
   },
   {
+    _id: uuid(),
     title: "Michael Kors",
     price: 17000,
     description: "Alice Logo Ballet Flat",
@@ -132,6 +137,7 @@ export const products = [
       "https://assets.ajio.com/medias/sys_master/root/h76/h90/14184011726878/-473Wx593H-410158870-vanilla-MODEL.jpg",
   },
   {
+    _id: uuid(),
     title: "Jimmy Choo",
     description: " ",
     price: 90000,
@@ -145,6 +151,7 @@ export const products = [
       "https://assets.ajio.com/medias/sys_master/root/20220211/mIvv/620682fef997dd03e2cc67f9/-473Wx593H-410298709-74-MODEL.jpg",
   },
   {
+    _id: uuid(),
     title: "Gucci",
     price: 28000,
     description: "Dorothy Flex Leather Pump",
