@@ -9,8 +9,8 @@ export function LoginPage() {
   const [loginError, setLoginError] = useState("");
 
   const testUser = {
-    email: "adarshbalika@gmail.com",
-    password: "adarshbalika",
+    email: "batmanmarvel@gmail.com",
+    password: "batmanmarvel",
   };
 
   const setUserData = (name) => {

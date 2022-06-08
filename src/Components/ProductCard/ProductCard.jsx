@@ -40,18 +40,22 @@ export function ProductCard({ products }) {
             <h5>₹{price}</h5>
             <h5>{rating}*</h5>
             {cart.find((item) => item._id === products._id) ? (
-              <i className="prod-btn-bag-card">
-                <Link className="chg-color" to="/cart">
-                  Go to Cart
-                </Link>
-              </i>
+              <div className="btn-container">
+                <i className="prod-btn-bag-card">
+                  <Link className="chg-color" to="/cart">
+                    Go to Cart
+                  </Link>
+                </i>
+              </div>
             ) : (
-              <i
-                className="prod-btn-bag-card"
-                onClick={() => addToCart(products)}
-              >
-                MOVE TO BAG
-              </i>
+              <div className="btn-container">
+                <i
+                  className="prod-btn-bag-card"
+                  onClick={() => addToCart(products)}
+                >
+                  MOVE TO BAG
+                </i>
+              </div>
             )}
           </div>
         </div>

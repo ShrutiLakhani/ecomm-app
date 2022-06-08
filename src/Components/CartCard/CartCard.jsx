@@ -29,16 +29,16 @@ export function CartCard({ cartItem }) {
               <label for="quantity">Quantity</label>
               <button
                 className="qty-button"
-                onClick={() => incrementCart(cartItem)}
+                onClick={() => decrementCart(cartItem)}
               >
-                +
+                -
               </button>
               <span className="item-qty">{qty}</span>
               <button
                 className="qty-button"
-                onClick={() => decrementCart(cartItem)}
+                onClick={() => incrementCart(cartItem)}
               >
-                -
+                +
               </button>
             </div>
             <div>{price}</div>

@@ -64,6 +64,7 @@ ins {
   color: white;
   text-decoration: none;
   font-size: 1rem;
+  font-style: normal;
 }
 .primary-button-icon-cart .material-icons {
   color: var(--component-white-color);
@@ -134,4 +135,8 @@ ins {
 .prod-btn-bag-card .chg-color {
   color: var(--component-white-color);
   text-decoration: none;
+  font-style: normal;
+}
+.btn-container {
+  margin-bottom: 2rem;
 }
