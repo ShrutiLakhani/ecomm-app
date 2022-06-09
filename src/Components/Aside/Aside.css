@@ -103,6 +103,7 @@
   margin-left: 6rem;
   padding: 0;
   border: none;
-  background-color: none;
   font-size: 1rem;
+  background: none !important;
+  color: var(--link-color);
 }
