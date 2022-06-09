@@ -50,7 +50,7 @@ From **WishList** page
 
 - remove Items from your WishList 
 - add Items in your Cart
-- oast appears when any of the above action occurs 
+- Toast appears when any of the above action occurs 
 
 
 
