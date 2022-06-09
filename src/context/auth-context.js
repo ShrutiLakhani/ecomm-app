@@ -17,14 +17,6 @@ const AuthProvider = ({ children }) => {
     }
   }, [userToken]);
 
-  // const logoutHandler = () => {
-  //   localStorage.removeItem("userToken");
-  //   setLoggedIn(false);
-  //   setCartData([]);
-  //   setWishlistData([]);
-  //   navigate("/");
-  // };
-
   return (
     <AuthContext.Provider value={{ loggedIn, setLoggedIn }}>
       {children}

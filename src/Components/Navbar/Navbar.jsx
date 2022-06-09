@@ -6,8 +6,8 @@ import { useCart } from "../../context/cart-context";
 import { useWishlist } from "../../context/wishlist-context";
 export function Navbar() {
   const { loggedIn, setLoggedIn } = useAuth();
-  const { cartData, setCartData } = useCart();
-  const { wishlistData, setWishlistData } = useWishlist();
+  const { cartData, setCartData, cartCount } = useCart();
+  const { wishlistData, setWishlistData, wishlistCount } = useWishlist();
 
   const navigate = useNavigate();
 
@@ -38,23 +38,41 @@ export function Navbar() {
                 <div className="dropdown-content">
                   <Link to="/cart">Orders</Link>
                   <Link to="/wishlist">Wishlist</Link>
-                  <a href="#">Giftcards</a>
-                  <a href="#">Contact Us</a>
+                  <Link to="#">Giftcards</Link>
+                  <Link to="#">Contact Us</Link>
                   <Link onClick={logoutHandler} to="/">
                     <i className="fas fa-sign-out-alt">Logout</i>
                   </Link>
                 </div>
               </div>
-              <div className="icon-ecomm">
-                <Link to="/wishlist">
-                  <i className="far fa-heart fa-lg"></i>
+              {loggedIn ? (
+                <div className="icon-ecomm wishlist-icon">
+                  <Link to="/wishlist">
+                    <span class="material-icons">favorite_border</span>
+                  </Link>
+                  <div className="style-badge style-badge2 badge-ecomm">
+                    {wishlistCount}
+                  </div>
+                </div>
+              ) : (
+                <Link to="/login" className="login-link">
+                  <span>Login</span>
                 </Link>
-              </div>
-              <div className="icon-ecomm">
-                <Link to="/cart">
-                  <span className="material-icons">shopping_bag</span>
+              )}
+              {loggedIn ? (
+                <div className="icon-ecomm cart-icon">
+                  <Link to="/cart">
+                    <span className="material-icons">shopping_bag</span>
+                  </Link>
+                  <div className="style-badge style-badge2 badge-ecomm">
+                    {cartCount}
+                  </div>
+                </div>
+              ) : (
+                <Link to="/signup" className="login-link">
+                  <span>SignUp</span>
                 </Link>
-              </div>
+              )}
             </div>
           </section>
         </div>

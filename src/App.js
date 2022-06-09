@@ -9,6 +9,7 @@ import {
   WishlistPage,
   CartPage,
 } from "./Pages/index.js";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="signup" element={<SignupPage />} />
           <Route path="product" element={<ProductPage />} />
         </Routes>
+        <ToastContainer />
       </div>
     </>
   );

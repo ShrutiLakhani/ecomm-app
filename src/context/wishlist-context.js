@@ -3,6 +3,7 @@ import { createContext, useContext, useReducer, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { wishlistReducer } from "../reducer/wishlistReducer";
 import { useAuth } from "../context/auth-context";
+import Toast from "../Components/Toast";
 
 const WishlistContext = createContext();
 
@@ -43,7 +44,7 @@ const WishlistProvider = ({ children }) => {
   const addToWishlist = async (product) => {
     if (loggedIn) {
       if (wishlistState.wishlist.some((item) => item._id === product._id)) {
-        console.log("Product already exists");
+        Toast({ type: "info", message: "Product already in wishlist" });
       } else {
         try {
           const response = await axios.post(
@@ -60,14 +61,18 @@ const WishlistProvider = ({ children }) => {
               type: "ADD_TO_WISHLIST",
               payload: response.data.wishlist,
             });
-            console.log("Product added to wishlist");
+            Toast({ type: "success", message: "Product added to wishlist" });
           }
         } catch (error) {
           console.log(error);
+          Toast({
+            type: "error",
+            message: "Some error occured. Please try again",
+          });
         }
       }
     } else {
-      console.log("Please login to continue");
+      Toast({ type: "error", message: "Please login to continue" });
       navigate("/login");
     }
   };
@@ -87,13 +92,13 @@ const WishlistProvider = ({ children }) => {
             type: "DELETE_FROM_WISHLIST",
             payload: response.data.wishlist,
           });
-          console.log("Product removed from wishlist");
+          Toast({ type: "success", message: "Product removed from wishlist" });
         }
       } catch (error) {
         console.log(error);
       }
     } else {
-      console.log("Please login to continue");
+      Toast({ type: "error", message: "Please login to continue" });
     }
   };
 
