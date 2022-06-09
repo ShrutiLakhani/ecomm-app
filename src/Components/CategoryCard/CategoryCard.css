@@ -1,0 +1,11 @@
+.Wishlist-container .card2-container .category-card {
+  padding-bottom: 0px;
+  box-shadow: none;
+}
+
+.card-category-shop {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

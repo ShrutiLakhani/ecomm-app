@@ -1,0 +1,30 @@
+.page-wrapper {
+  height: max-content;
+  margin: 0 4rem;
+  z-index: 10;
+}
+
+.product-content-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.product-page {
+  display: flex;
+}
+.btn-bag-card {
+  color: var(--text-card-primary-color);
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 2rem 4rem;
+}
+.wishlist-card .card-closebtn {
+  font-size: 1.5rem;
+  position: absolute;
+  left: 95%;
+  top: 0%;
+  color: var(--component-black-color);
+  text-decoration: none;
+}
