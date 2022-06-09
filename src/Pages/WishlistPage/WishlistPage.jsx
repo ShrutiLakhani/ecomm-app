@@ -13,13 +13,6 @@ export function WishlistPage() {
               <WishlistCard />
               <WishlistCard />
               <WishlistCard />
-              <WishlistCard />
-              <WishlistCard />
-              <WishlistCard />
-              <WishlistCard />
-              <WishlistCard />
-              <WishlistCard />
-              <WishlistCard />
             </div>
           </div>
         </div>
