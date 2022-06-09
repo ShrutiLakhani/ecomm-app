@@ -38,8 +38,8 @@ export function Navbar() {
                 <div className="dropdown-content">
                   <Link to="/cart">Orders</Link>
                   <Link to="/wishlist">Wishlist</Link>
-                  <a href="#">Giftcards</a>
-                  <a href="#">Contact Us</a>
+                  <Link to="#">Giftcards</Link>
+                  <Link to="#">Contact Us</Link>
                   <Link onClick={logoutHandler} to="/">
                     <i className="fas fa-sign-out-alt">Logout</i>
                   </Link>
