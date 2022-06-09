@@ -9,7 +9,6 @@ import { getProductList } from "../../context/filter-context";
 
 export function ProductPage() {
   const { filterState } = useFilter();
-
   const [products, setProducts] = useState([]);
   const finalProductList = getProductList(filterState, products);
   async function getProducts() {

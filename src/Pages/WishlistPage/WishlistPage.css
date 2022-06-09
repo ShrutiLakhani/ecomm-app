@@ -1,7 +1,21 @@
-  .wishlist-head {
-      display: flex;
-      justify-content: space-between;
-      font-size: 1.2rem;
-      white-space: nowrap;
-      margin-top: 1rem;
-  }
+.wishlist-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  margin-top: 1rem;
+}
+
+.wishlist-empty-section > h1 {
+  text-align: center;
+  margin: 20rem 20rem;
+  font-size: 4rem;
+  white-space: nowrap;
+}
+
+.wishlist-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  max-width: 100rem;
+}
