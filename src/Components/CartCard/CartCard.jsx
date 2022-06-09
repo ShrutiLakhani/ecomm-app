@@ -8,13 +8,10 @@ export function CartCard({ cartItem }) {
   const { image, title, description, price, qty } = cartItem;
   const { deleteFromCart, incrementCart, decrementCart } = useCart();
   const { addToWishlist } = useWishlist();
-  console.log(cartItem);
-
   const moveToWishlist = (cartItem) => {
     addToWishlist(cartItem);
     deleteFromCart(cartItem);
   };
-
   return (
     <div className="cart-card">
       <div className="card-container">
