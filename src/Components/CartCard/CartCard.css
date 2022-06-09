@@ -125,6 +125,7 @@ h4 {
   line-height: 2.5rem;
   color: var(--link-color);
   padding: 8px;
+  font-style: normal;
 }
 
 .cart-container .quantity .cart-quantity {

@@ -7,7 +7,6 @@ export function WishlistCard(items) {
   const { cart, addToCart } = useCart();
   const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
   const { image, title, description, price, rating } = items;
-  console.log(items);
 
   function moveToCart(product) {
     addToCart(product);

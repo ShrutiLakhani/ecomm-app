@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { cartReducer } from "../reducer/cartReducer";
 import { useAuth } from "../context/auth-context";
+import Toast from "../Components/Toast";
 
 const CartContext = createContext();
 
@@ -58,14 +59,14 @@ const CartProvider = ({ children }) => {
           );
           if (response.status === 201) {
             cartDispatch({ type: "ADD_TO_CART", payload: response.data.cart });
-            console.log("Product added to Cart");
+            Toast({ type: "success", message: "Product added to Cart" });
           }
         } catch (error) {
           console.log(error);
         }
       }
     } else {
-      console.log("Please login to continue");
+      Toast({ type: "error", message: "Please login to continue" });
       navigate("/login");
     }
   };
@@ -83,13 +84,13 @@ const CartProvider = ({ children }) => {
             type: "DELETE_FROM_CART",
             payload: response.data.cart,
           });
-          console.log("Product removed from Cart");
+          Toast({ type: "success", message: "Product removed from Cart" });
         }
       } catch (error) {
         console.log(error);
       }
     } else {
-      console.log("Please login to continue");
+      Toast({ type: "error", message: "Please login to continue" });
     }
   };
 
@@ -111,13 +112,13 @@ const CartProvider = ({ children }) => {
         );
         if (response.status === 200) {
           cartDispatch({ type: "INCREMENT_CART", payload: response.data.cart });
-          console.log("Product added to Cart");
+          Toast({ type: "success", message: "Product added to Cart" });
         }
       } catch (error) {
         console.log(error);
       }
     } else {
-      console.log("Please login to continue");
+      Toast({ type: "error", message: "Please login to continue" });
     }
   };
 
@@ -145,14 +146,14 @@ const CartProvider = ({ children }) => {
               type: "DECREMENT_CART",
               payload: response.data.cart,
             });
-            console.log("Product removed from Cart");
+            Toast({ type: "success", message: "Product removed from Cart" });
           }
         } catch (error) {
           console.log(error);
         }
       }
     } else {
-      console.log("Please login to continue");
+      Toast({ type: "error", message: "Please login to continue" });
     }
   };
 

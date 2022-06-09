@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../../context/cart-context";
-
-// import { useWishlist } from "../../context/wishlist-context";
-
 import "./TotalBill.css";
 export function TotalBill() {
   const { cartCount, cartTotalPrice, cartFinalAmount, checkOut } = useCart();
