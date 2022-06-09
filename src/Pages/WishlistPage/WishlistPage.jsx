@@ -8,7 +8,7 @@ export function WishlistPage() {
   return (
     <>
       <main className="page-wrapper">
-        <div class="wishlist-page">
+      <div class="wishlist-page">
           <div class="wishlist-head">My Wishlist</div>
           {wishlist.length === 0 ? (
             <div className="wishlist-empty-section">
