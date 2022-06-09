@@ -1,5 +1,5 @@
 <div align="center">
-# CANVAS-LUXE
+ CANVAS-LUXE
 </div>
 
 ### 📕 Table of Contents
