@@ -14,7 +14,7 @@ export function CartCard() {
           </div>
           <div className="card-details">
             <h3>Michael Kors</h3>
-            <p>MICHAEL Brown & Acorn Carmen Small Satchel</p>
+            <p>MICHAEL Brown & Carmen Small Satchel</p>
             <p>Brown</p>
             <div className="quantity">
               <label for="quantity">Qty</label>
