@@ -124,7 +124,7 @@ const CartProvider = ({ children }) => {
 
   const decrementCart = async (product) => {
     if (loggedIn) {
-      if (product.quantity === 1) {
+      if (product.qty === 1) {
         deleteFromCart(product);
       } else {
         try {

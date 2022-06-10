@@ -9,3 +9,6 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+html {
+  scroll-behavior: smooth;
+}

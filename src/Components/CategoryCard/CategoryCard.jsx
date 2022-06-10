@@ -22,9 +22,8 @@ export function CategoryCard() {
   }, []);
 
   const categorizedList = (categoryName) => {
-    console.log({ categoryName });
+    window.scroll(0, 0);
     filterDispatch({ type: "CATEGORY", payload: categoryName });
-    console.log({ categoryName });
   };
   return (
     <div className="card-category-shop">

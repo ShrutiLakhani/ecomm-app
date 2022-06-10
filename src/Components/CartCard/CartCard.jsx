@@ -20,12 +20,13 @@ export function CartCard({ cartItem }) {
             <img src={image} alt="{title}" />
           </div>
           <div className="card-details">
-             <h3>{title}</h3>
+            <h3>{title}</h3>
             <p>{description}</p>
             <div className="quantity">
               <label for="quantity">Quantity</label>
               <button
                 className="qty-button"
+                min="0"
                 onClick={() => decrementCart(cartItem)}
               >
                 -

@@ -13,3 +13,21 @@
 .product-page {
   display: flex;
 }
+.breadcrumb-content {
+  margin: 0 -4rem;
+  padding: 1rem 4rem;
+  background-color: var(--main-background-color);
+  font-weight: 400;
+  font-size: 0.8rem;
+  text-align: left;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+.breadcrumb-content a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--link-color);
+}
+html {
+  scroll-behavior: smooth;
+}

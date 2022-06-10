@@ -19,64 +19,64 @@ export function Navbar() {
     navigate("/");
   };
   return (
-    <nav>
-      <header className="header-outer">
-        <div className="header-inner">
-          <section className="ecomm-navbar">
-            <Link to="/" className="ecomm-logo-img"></Link>
-            <div>
-              <input
-                className="nav-input-container fa"
-                placeholder="Search"
-              ></input>
-            </div>
-            <div className="nav-action-buttons">
-              <div className="dropdown">
-                <Link to="/signup">
-                  <i className="fas fa-user fa-lg"></i>
+    // <nav>
+    <header className="header-outer">
+      <div className="header-inner">
+        <section className="ecomm-navbar">
+          <Link to="/" className="ecomm-logo-img"></Link>
+          <div>
+            <input
+              className="nav-input-container fa"
+              placeholder="Search"
+            ></input>
+          </div>
+          <div className="nav-action-buttons">
+            <div className="dropdown">
+              <Link to="/signup">
+                <i className="fas fa-user fa-lg"></i>
+              </Link>
+              <div className="dropdown-content">
+                <Link to="/cart">Orders</Link>
+                <Link to="/wishlist">Wishlist</Link>
+                <Link to="#">Giftcards</Link>
+                <Link to="#">Contact Us</Link>
+                <Link onClick={logoutHandler} to="/">
+                  <i className="fas fa-sign-out-alt">Logout</i>
                 </Link>
-                <div className="dropdown-content">
-                  <Link to="/cart">Orders</Link>
-                  <Link to="/wishlist">Wishlist</Link>
-                  <Link to="#">Giftcards</Link>
-                  <Link to="#">Contact Us</Link>
-                  <Link onClick={logoutHandler} to="/">
-                    <i className="fas fa-sign-out-alt">Logout</i>
-                  </Link>
+              </div>
+            </div>
+            {loggedIn ? (
+              <div className="icon-ecomm wishlist-icon">
+                <Link to="/wishlist">
+                  <span class="material-icons">favorite_border</span>
+                </Link>
+                <div className="style-badge style-badge2 badge-ecomm">
+                  {wishlistCount}
                 </div>
               </div>
-              {loggedIn ? (
-                <div className="icon-ecomm wishlist-icon">
-                  <Link to="/wishlist">
-                    <span class="material-icons">favorite_border</span>
-                  </Link>
-                  <div className="style-badge style-badge2 badge-ecomm">
-                    {wishlistCount}
-                  </div>
-                </div>
-              ) : (
-                <Link to="/login" className="login-link">
-                  <span>Login</span>
+            ) : (
+              <Link to="/login" className="login-link">
+                <span>Login</span>
+              </Link>
+            )}
+            {loggedIn ? (
+              <div className="icon-ecomm cart-icon">
+                <Link to="/cart">
+                  <span className="material-icons">shopping_bag</span>
                 </Link>
-              )}
-              {loggedIn ? (
-                <div className="icon-ecomm cart-icon">
-                  <Link to="/cart">
-                    <span className="material-icons">shopping_bag</span>
-                  </Link>
-                  <div className="style-badge style-badge2 badge-ecomm">
-                    {cartCount}
-                  </div>
+                <div className="style-badge style-badge2 badge-ecomm">
+                  {cartCount}
                 </div>
-              ) : (
-                <Link to="/signup" className="login-link">
-                  <span>SignUp</span>
-                </Link>
-              )}
-            </div>
-          </section>
-        </div>
-      </header>
-    </nav>
+              </div>
+            ) : (
+              <Link to="/signup" className="login-link">
+                <span>SignUp</span>
+              </Link>
+            )}
+          </div>
+        </section>
+      </div>
+    </header>
+    // </nav>
   );
 }

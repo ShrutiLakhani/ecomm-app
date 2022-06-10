@@ -24,10 +24,14 @@ export function ProductPage() {
   return (
     <>
       <main className="page-wrapper">
+        <div class="breadcrumb-content">
+          <Link to="/">Home</Link>
+          <span>|</span>
+          <Link to="/product">Product</Link>
+        </div>
         <div className="product-page">
           <Aside />
           <div className="product-content-container">
-            {/* <div> */}
             <ul className="product-content-container">
               {finalProductList.map((product) => (
                 <li key={product.id}>
